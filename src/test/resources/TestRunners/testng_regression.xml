@@ -3,7 +3,7 @@
 <suite name="blueBrix Automation Testing" thread-count="2" parallel="tests" verbose="2">
 	<listeners>
 		<listener class-name="Bluebrix.QA.Platform.Listners.ExtentListner"></listener>
-		<listener class-name="Bluebrix.QA.Platform.Listners.TestAllurelistner"></listener>
+		<listener class-name="Bluebrix.QA.Platform.Listners.TestAllureListener"></listener>
 	</listeners>
 
 	<test name="Login Page Test">
