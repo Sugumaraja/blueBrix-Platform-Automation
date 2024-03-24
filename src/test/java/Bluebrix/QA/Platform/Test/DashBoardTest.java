@@ -18,9 +18,9 @@ public class DashBoardTest extends BaseTest {
 	public Object[][] CreateAppData() {
 		return new Object[][] {
 				{ "Mobile", "Mob Test", "short desc mob", "Mumbai", "Lithuanian", "Patient app",
-						".\\src\\test\\resources\\TestData\\UploadFiles\\Mobapp.png" },
+						"./src/test/resources/TestData/UploadFiles/Mobapp.png" },
 				{ "Web", "WebAPP", "short desc", "Mumbai", "English (Standard)", "Patient app",
-						".\\src\\test\\resources\\TestData\\UploadFiles\\Webapp.png" } };
+						"./src/test/resources/TestData/UploadFiles/Webapp.png" } };
 	}
 
 	@Test(dataProvider="CreateAppData")
