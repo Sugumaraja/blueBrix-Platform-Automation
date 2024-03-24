@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>blueBrix_Automation</groupId>
+	<artifactId>blueBrix_Automation</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+
+	<name>blueBrix_Automation</name>
+	<!-- FIXME change it to the project's website -->
+	<url>http://www.example.com</url>
+
+	<properties>
+		<project.bui.sourceEncoding>UTF-8</project.bui.sourceEncoding>
+		<maven.compiler.source>11</maven.compiler.source>
+		<maven.compiler.target>11</maven.compiler.target>
+	
+		<allure-version>2.24.0</allure-version>
+		<aspectj-version>1.9.20.1</aspectj-version>
+		<lambok-version>1.18.30</lambok-version>
+		<extent-version>5.0.4</extent-version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-java</artifactId>
+			<version>4.17.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.aventstack</groupId>
+			<artifactId>extentreports</artifactId>
+			<version>${extent-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>${lambok-version}</version> <!-- Use the latest version -->
+			
+		</dependency>
+		<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>7.9.0</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>io.qameta.allure</groupId>
+			<artifactId>allure-testng</artifactId>
+			<version>${allure-version}</version>
+
+		</dependency>
+		<dependency>
+			<groupId>org.aspectj</groupId>
+			<artifactId>aspectjweaver</artifactId>
+			<version>${aspectj-version}</version>
+		</dependency>
+
+	</dependencies>
+
+	<build>
+		<plugins>
+			<!-- Maven Compiler Plugin -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.8.1</version> <!-- Latest version as of now -->
+				<configuration>
+					<source>17</source> <!-- Java version, adjust as needed -->
+					<target>17</target> <!-- Java version, adjust as needed -->
+				</configuration>
+			</plugin>
+
+			<!-- Maven Surefire Plugin -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>3.2.5</version>
+				<configuration>
+					<forkCount>4</forkCount>
+					<reuseForks>true</reuseForks>
+					<suiteXmlFiles>
+						<suiteXmlFile>src/test/resources/Testrunners/testng_regression.xml</suiteXmlFile>
+					</suiteXmlFiles>
+
+					<argLine>
+						<!-- -Dfile.encoding=${project.build.sourceEncoding}-->
+						-javaagent:"C:\Users\Sugumar Raja\.m2\repository\org\aspectj\aspectjweaver\${aspectj-version}\aspectjweaver-${aspectj-version}.jar"
+					</argLine>
+				</configuration>
+
+				<dependencies>
+					<dependency>
+						<groupId>org.aspectj</groupId>
+						<artifactId>aspectjweaver</artifactId>
+						<version>${aspectj-version}</version>
+					</dependency>
+				</dependencies>
+			</plugin>
+		</plugins>
+	</build>
+</project>
