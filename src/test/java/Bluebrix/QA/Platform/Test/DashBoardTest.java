@@ -18,9 +18,9 @@ public class DashBoardTest extends BaseTest {
 	public Object[][] CreateAppData() {
 		return new Object[][] {
 				{ "Mobile", "Mob Test", "short desc mob", "Mumbai", "Lithuanian", "Patient app",
-						"./src/test/resources/TestData/UploadFiles/Mobapp.png" },
+						"C:\\Users\\Sugumar Raja\\eclipse-workspace\\blueBrix_Automation\\src\\test\\resources\\TestData\\UploadFiles\\Mobapp.png" },
 				{ "Web", "WebAPP", "short desc", "Mumbai", "English (Standard)", "Patient app",
-						"./src/test/resources/TestData/UploadFiles/Webapp.png" } };
+						"C:\\Users\\Sugumar Raja\\eclipse-workspace\\blueBrix_Automation\\src\\test\\resources\\TestData\\UploadFiles\\Webapp.png" } };
 	}
 
 	@Test(dataProvider="CreateAppData")

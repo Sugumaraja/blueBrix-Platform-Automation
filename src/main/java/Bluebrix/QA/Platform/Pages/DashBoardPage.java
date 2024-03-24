@@ -76,7 +76,7 @@ public class DashBoardPage {
 			eleutil.dropDownSelectMidOfList(DataSourceList, AppConstants.SHORT_WAIT);
 			System.out.println("it is a webapp");
 		}
-//		eleutil.clickElement(CreateAPPBtn);
+		eleutil.clickElement(CreateAPPBtn);
 		Thread.sleep(AppConstants.SLEEP_WAIT_LONG);
 		eleutil.browserBackward();
 
