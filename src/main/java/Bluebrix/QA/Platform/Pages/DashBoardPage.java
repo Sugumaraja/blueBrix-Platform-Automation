@@ -12,7 +12,6 @@ import Bluebrix.QA.Platform.Utils.EleUtil;
 public class DashBoardPage {
 	private WebDriver driver;
 	private EleUtil eleutil;
-//	private Properties prop;
 	private By Header = By.xpath("(//h1[@class='text-base font-bold text-blue'])[1]");
 	private By CreateBtn = By.cssSelector(".px-9");// xpath("//span[@class='btn-dragon px-9']");
 	private By WebTemp = By.xpath(
@@ -22,12 +21,12 @@ public class DashBoardPage {
 
 	private By AppName = By.name("appName");
 	private By AppShortDesc = By.name("appShortDesc");
-//private By DeployRegion=By.xpath("//div[@class='react-select__value-container css-hlgwow']");
+
 	private By AppLang = By.xpath("(//div[@class='react-select__input-container css-19bb58m'])[2]");
 	private By DeployRegion = By
 			.cssSelector("div.inline-block div[class='basic-multi-select  react-select-single css-b62m3t-container']");
 	private By RegionsList = By.cssSelector(".react-select__menu-list>div");
-//	private By AppLanguages = By.cssSelector("div.react-select__value-container div#react-select-3-placeholder");
+
 	private By LangsList = By.cssSelector("div.react-select__menu-portal div[role='listbox'] div");
 
 	private By NextBtn = By.xpath("//button[text()='Next']");
@@ -37,7 +36,7 @@ public class DashBoardPage {
 	private By AppTypeList = By.cssSelector(".css-qr46ko div.react-select__option");
 	private By fileupload = By.cssSelector("#app-logo-file");
 	private By CreateAPPBtn = By.cssSelector("button[data-testid='footer-create-button']");
-//	private By DataSourceList = By.cssSelector(".data-source-wrapper div.app-list-container div[data-testid='choose-template-card-modal']");
+
 	private By DataSourceList = By.cssSelector(
 			".data-source-wrapper div.app-list-container div[data-testid='choose-template-card-modal'] div h3");
 
