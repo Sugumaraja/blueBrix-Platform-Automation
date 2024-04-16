@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="blueBrix Automation Testing" thread-count="2" parallel="tests" verbose="2">
+	<listeners>
+		<listener class-name="Bluebrix.QA.Platform.Listners.ExtentListner"></listener>
+		<listener class-name="Bluebrix.QA.Platform.Listners.TestAllureListener"></listener>
+	</listeners>
+
+	<test name="Login Page Test">
+		<parameter name="browser" value="edge"></parameter>
+		<classes>
+			<class name="Bluebrix.QA.Platform.Test.LoginTest" />
+		</classes>
+	</test>
+	<test name="App creation Test">
+		<parameter name="browser" value="chrome"></parameter>
+		<classes>
+			<class name="Bluebrix.QA.Platform.Test.DashBoardTest" />
+		</classes>
+	</test>
+</suite>
